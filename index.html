@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly | Online Fashion & Clothing Boutique</title>
+  <meta name="description" content="Discover Stackly - Curated online fashion boutique featuring haute couture evening gowns, contemporary menswear, luxury designer bags, footwear, and signature fragrances with fast global delivery.">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Lenis Smooth Scroll CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
+
+  <!-- Custom Fashion Boutique Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Preloader Animation
+       ========================================================================= -->
+  <div id="preloader" aria-live="polite" aria-label="Loading Stackly Boutique">
+    <div class="preloader-content">
+      <div class="preloader-brand">
+        <img src="assets/images/stackly_061.webp" alt="Stackly Logo" class="preloader-logo-img">
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
+      </div>
+      <div class="preloader-tagline">Haute Couture • Everyday Elegance • Curated For You</div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       1. Header and Navigation
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    
+
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/images/stackly_061.webp" alt="Stackly Boutique Logo" class="brand-logo-img">
+        <!-- <span class="brand-title">Stackly<span class="brand-sub">Boutique</span></span> -->
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links" id="navLinks" data-lenis-prevent>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="404.html" class="nav-link">About</a></li>
+          <li><a href="404.html" class="nav-link">Service</a></li>
+          <li><a href="404.html" class="nav-link">Blog</a></li>
+          <li><a href="404.html" class="nav-link">Contact</a></li>
+          <li class="mobile-login-item">
+            <a href="404.html" class="btn btn-primary btn-login-mobile" title="Client Login">
+              <i class="fa-regular fa-user"></i>
+              <span>Login</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Items: Wishlist & Cart -->
+      <div class="nav-actions">
+        <!-- Wishlist Button with Dynamic Badge -->
+        <button class="wishlist-btn" id="wishlistTriggerBtn" title="Saved Boutique Items" aria-label="View Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="nav-count-badge" id="wishlistCountBadge" style="display:none;">0</span>
+        </button>
+
+        <!-- Shopping Cart Button with Dynamic Badge -->
+        <button class="cart-btn" id="cartTriggerBtn" title="Shopping Bag" aria-label="View Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="nav-count-badge" id="cartCountBadge" style="display:none;">0</span>
+        </button>
+
+        <!-- Login Button -->
+        <a href="404.html" class="btn btn-primary btn-sm btn-login" id="loginBtn" title="Client Login">
+          <i class="fa-regular fa-user"></i>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Hero Section with Fashion Banner
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-backdrop-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <!-- Boutique Badge -->
+        <div class="hero-pill" data-aos="fade-down" data-aos-delay="100">
+          <i class="fa-solid fa-gem"></i>
+          <span>Haute Couture 2026 Collection • Curated Runway Pieces</span>
+        </div>
+
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+          Elegance Redefined,<br><span>Tailored For You</span>
+        </h1>
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+          Explore artisanal evening gowns, precision-tailored menswear, luxury handcrafted leather bags, and enchanting fragrances from the world’s most renowned ateliers.
+        </p>
+
+        <!-- Hero Actions -->
+        <div class="hero-actions-row" data-aos="fade-up" data-aos-delay="400">
+          <a href="#catalogSection" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-bag-shopping"></i> Shop Collection
+          </a>
+          <a href="#newArrivalsSection" class="btn btn-outline-light btn-lg">
+            <i class="fa-solid fa-sparkles"></i> New Arrivals
+          </a>
+        </div>
+
+       
+
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. Featured Categories
+       ========================================================================= -->
+  <section class="categories-section" id="categoriesSection">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Curated Universes</span>
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-description">
+          Explore our hand-selected boutique collections designed for extraordinary statements and effortless sophistication.
+        </p>
+      </div>
+
+      <!-- Categories Grid (Dynamic via js/app.js & js/data.js) -->
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. New Arrivals
+       ========================================================================= -->
+  <section class="new-arrivals-section" id="newArrivalsSection">
+    <div class="container">
+      <div class="section-header-flex" data-aos="fade-up">
+        <div>
+          <span class="section-subtitle">Fresh From The Runway</span>
+          <h2 class="section-title">New Arrivals</h2>
+          <p class="section-description">The latest seasonal drops, fresh silhouettes, and limited edition designer pieces.</p>
+        </div>
+        <a href="#catalogSection" class="btn btn-outline btn-sm">
+          View All Runway Drops <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- New Arrivals Grid -->
+      <div class="products-grid" id="newArrivalsGrid">
+        <!-- Rendered dynamically via js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Trending Products (Dynamic DummyJSON API with Search, Filter & Sort)
+       ========================================================================= -->
+  <section class="catalog-section" id="catalogSection">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">The Atelier Edit</span>
+        <h2 class="section-title">Trending Products</h2>
+        <p class="section-description">
+          Live real-time products curated via DummyJSON Products API. Search, filter by department, and sort by price or rating.
+        </p>
+      </div>
+
+      <!-- Catalog Controls Bar -->
+      <div class="catalog-controls-card" data-aos="fade-up" data-aos-delay="100">
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs-wrapper" id="catalogCategoryTabs">
+          <button type="button" class="filter-tab active" data-category="all">
+            <i class="fa-solid fa-border-all"></i> All Fashion
+          </button>
+          <button type="button" class="filter-tab" data-category="womens-dresses">
+            <i class="fa-solid fa-person-dress"></i> Women's Dresses
+          </button>
+          <button type="button" class="filter-tab" data-category="mens-shirts">
+            <i class="fa-solid fa-shirt"></i> Men's Shirts
+          </button>
+          <button type="button" class="filter-tab" data-category="womens-bags">
+            <i class="fa-solid fa-bag-shopping"></i> Bags & Clutches
+          </button>
+          <button type="button" class="filter-tab" data-category="womens-shoes">
+            <i class="fa-solid fa-shoe-prints"></i> Footwear
+          </button>
+          <button type="button" class="filter-tab" data-category="fragrances">
+            <i class="fa-solid fa-spray-can-sparkles"></i> Fragrances
+          </button>
+          <button type="button" class="filter-tab" data-category="sunglasses">
+            <i class="fa-solid fa-glasses"></i> Eyewear
+          </button>
+        </div>
+
+        <!-- Filter & Search Controls Row -->
+        <div class="catalog-search-sort-row">
+          <!-- Search input -->
+          <div class="catalog-search-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="productSearchInput" placeholder="Search products by name or style..." aria-label="Search products">
+          </div>
+
+          <!-- Sort dropdown -->
+          <div class="catalog-sort-wrap">
+            <label for="productSortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort By:</label>
+            <select id="productSortSelect" class="sort-select">
+              <option value="featured">Featured Runway</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating-high">Highest Rated ★</option>
+              <option value="discount-high">Biggest Discount %</option>
+            </select>
+          </div>
+
+          <!-- Clear Filters -->
+          <button type="button" class="btn btn-outline btn-sm" id="clearFiltersBtn" title="Reset all filters">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+          </button>
+        </div>
+
+        <!-- Results Counter -->
+        <div class="catalog-count-bar">
+          <span id="productsCountLabel">Loading boutique styles...</span>
+        </div>
+      </div>
+
+      <!-- Skeletons Loading Container -->
+      <div class="products-grid skeleton-loading-grid" id="catalogLoading" style="display:none;">
+        <!-- Filled with skeleton cards during API request -->
+      </div>
+
+      <!-- API Error State with Retry Button -->
+      <div class="catalog-error-state" id="catalogError" style="display:none;">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h3>Unable to Connect to DummyJSON API</h3>
+        <p>Please check your internet connection and try again.</p>
+        <button type="button" class="btn btn-primary btn-sm" id="retryFetchBtn">
+          <i class="fa-solid fa-rotate-right"></i> Retry Connection
+        </button>
+      </div>
+
+      <!-- Dynamic Trending Products Grid -->
+      <div class="products-grid" id="trendingProductsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Load More / Pagination Button -->
+      <div class="load-more-wrap text-center" id="loadMoreContainer" style="display:none;">
+        <button type="button" class="btn btn-secondary btn-lg" id="loadMoreBtn">
+          <span>Load More Styles</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. Customer Testimonials
+       ========================================================================= -->
+  <section class="testimonials-section" id="testimonialsSection">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-subtitle">Patron Stories</span>
+        <h2 class="section-title">Customer Testimonials</h2>
+        <p class="section-description">
+          Hear from our global patrons, stylists, and collectors who trust Stackly for their sartorial journey.
+        </p>
+      </div>
+
+      <!-- Testimonials Carousel Container -->
+      <div class="testimonial-carousel-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-track-window">
+          <div class="testimonial-track" id="testimonialTrack">
+            <!-- Rendered dynamically via js/app.js & js/data.js -->
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <button type="button" class="slider-arrow prev-arrow" id="prevTestimonialBtn" aria-label="Previous testimonial">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button type="button" class="slider-arrow next-arrow" id="nextTestimonialBtn" aria-label="Next testimonial">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Carousel Pagination Dots -->
+        <div class="slider-dots-container" id="testimonialDots">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. Newsletter Subscription
+       ========================================================================= -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card" data-aos="zoom-in">
+        <div class="newsletter-glow"></div>
+        <div class="newsletter-content">
+          <span class="newsletter-pill"><i class="fa-solid fa-envelope-open-text"></i> VIP SARTORIAL CLUB</span>
+          <h2 class="newsletter-title">Unlock Secret Drops & 15% Off</h2>
+          <p class="newsletter-desc">
+            Subscribe to our weekly curated edit. Receive private preview links to couture collections, seasonal gift guides, and exclusive subscriber incentives.
+          </p>
+
+          <form class="newsletter-form" id="newsletterForm">
+            <div class="newsletter-input-group">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="newsletterEmail" placeholder="Enter your personal email address..." required aria-label="Email address for newsletter">
+              <button type="submit" class="btn btn-primary">
+                <span>Join The Atelier</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+
+          <span class="newsletter-privacy"><i class="fa-solid fa-shield-halved"></i> Your privacy is sacred. Unsubscribe at any instant with 1-click.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Bio Column -->
+        <div class="footer-col footer-brand">
+          <a href="#hero" class="brand-logo footer-logo">
+            <img src="assets/images/stackly_061.webp" alt="Stackly Logo" class="brand-logo-img">
+            <!-- <span class="brand-title">Stackly<span class="brand-sub">Boutique</span></span> -->
+          </a>
+          <p class="footer-bio">
+            Stackly is a premier online fashion and clothing boutique devoted to enduring silhouettes, responsible atelier craftsmanship, and bespoke luxury fashion for women and men.
+          </p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Boutique Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="404.html"> About</a></li>
+            <li><a href="404.html">Services</a></li>
+            <li><a href="404.html">Blog </a></li>
+            <li><a href="404.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories Links -->
+        <div class="footer-col">
+          <h4>Departments</h4>
+          <ul class="footer-links">
+            <li><a href="404.html" onclick="">Evening & Cocktail Gowns</a></li>
+            <li><a href="404.html" onclick="">Tailored Men's Shirts</a></li>
+            <li><a href="404.html" onclick="">Handcrafted Leather Bags</a></li>
+            <li><a href="404.html" onclick="">Stiletto & Block Heels</a></li>
+            <li><a href="404.html" onclick="">Signature Perfumes</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care & Contact -->
+        <div class="footer-col">
+          <h4>Concierge & Support</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>MMR Complex, Chinna Thirupathi, Salem, TN 636008</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 9876543210</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>concierge@stackly.com</span>
+            </div>
+            <div class="footer-badges">
+              <span><i class="fa-solid fa-shield-check"></i> SSL Secure Checkout</span>
+              <span><i class="fa-solid fa-truck-fast"></i> Express Global Courier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Boutique Inc. All rights reserved. Crafted with timeless passion & elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Interactive Modals & Drawers
+       ========================================================================= -->
+
+  <!-- Modal Backdrop for dialogs -->
+  <div class="modal-backdrop" id="modalBackdrop">
+
+    <!-- 1. Product Details Modal Popup -->
+    <div class="modal-dialog product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" data-lenis-prevent>
+      <div class="modal-header">
+        <span class="modal-header-tag"><i class="fa-solid fa-gem"></i> Stackly Atelier Quick View</span>
+        <button class="modal-close-btn" id="closeProductModalBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body product-modal-body">
+        <!-- Left: Image Gallery & Thumbnails -->
+        <div class="modal-gallery-column">
+          <div class="modal-main-img-wrap">
+            <img src="" alt="Product Image" id="modalMainImg" class="modal-main-img">
+          </div>
+          <div class="modal-thumbnails-track" id="modalThumbnailsList">
+            <!-- Dynamic thumbnails -->
+          </div>
+        </div>
+
+        <!-- Right: Product Information & Controls -->
+        <div class="modal-info-column">
+          <div class="modal-top-tags">
+            <span class="modal-category-badge" id="modalCategoryBadge">Women's Fashion</span>
+            <span class="modal-stock-badge in-stock" id="modalStockBadge">
+              <i class="fa-solid fa-circle-check"></i> In Stock
+            </span>
+          </div>
+
+          <h2 class="modal-product-title" id="modalTitle">Product Title</h2>
+
+          <!-- Rating Stars & Reviews -->
+          <div class="modal-rating-row">
+            <div class="modal-stars" id="modalStars"></div>
+            <span class="modal-score" id="modalRatingScore">4.8</span>
+            <span class="modal-reviews-count" id="modalReviewsCount">(24 client reviews)</span>
+          </div>
+
+          <!-- Price & Discounts -->
+          <div class="modal-pricing-row">
+            <span class="modal-current-price" id="modalCurrentPrice">$0.00</span>
+            <span class="modal-original-price" id="modalOriginalPrice">$0.00</span>
+            <span class="modal-discount-tag" id="modalDiscountBadge">-15%</span>
+          </div>
+
+          <!-- Description -->
+          <p class="modal-desc-text" id="modalDesc">
+            Product description details will appear here.
+          </p>
+
+          <!-- Specifications List -->
+          <div class="modal-specs-list">
+            <div class="spec-item"><i class="fa-solid fa-barcode"></i> <strong>SKU:</strong> <span id="modalSku">STK-001</span></div>
+            <div class="spec-item"><i class="fa-solid fa-truck-fast"></i> <strong>Shipping:</strong> <span id="modalShipping">Express 2-3 Days</span></div>
+            <div class="spec-item"><i class="fa-solid fa-award"></i> <strong>Authenticity:</strong> <span id="modalWarranty">100% Certified</span></div>
+            <div class="spec-item"><i class="fa-solid fa-rotate-left"></i> <strong>Returns:</strong> <span id="modalReturnPolicy">30 Days Complimentary</span></div>
+          </div>
+
+          <!-- Quantity Stepper & Add to Cart -->
+          <div class="modal-cart-actions">
+            <div class="modal-qty-selector">
+              <button type="button" class="modal-qty-btn" id="modalQtyDec" aria-label="Decrease quantity">-</button>
+              <span class="modal-qty-value" id="modalQtyVal">1</span>
+              <button type="button" class="modal-qty-btn" id="modalQtyInc" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button type="button" class="btn btn-primary modal-add-cart-btn" id="modalAddToCartBtn">
+              <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+            </button>
+
+            <button type="button" class="modal-wishlist-icon-btn" id="modalWishlistBtn" title="Save to Wishlist" aria-label="Wishlist">
+              <i class="fa-regular fa-heart"></i>
+              <span>Save</span>
+            </button>
+          </div>
+
+          <!-- Client Reviews Accordion / Preview -->
+          <div class="modal-reviews-accordion">
+            <h4 class="accordion-title"><i class="fa-solid fa-comments"></i> Client Testimonials & Ratings</h4>
+            <div class="modal-reviews-list" id="modalReviewsList">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Secure Checkout Modal -->
+    <div class="modal-dialog checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle" data-lenis-prevent>
+      <div class="modal-header">
+        <h3 id="checkoutModalTitle"><i class="fa-solid fa-lock"></i> Stackly Concierge Checkout</h3>
+        <button class="modal-close-btn" id="closeCheckoutModalBtn" aria-label="Close checkout">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body checkout-modal-body">
+        <form class="checkout-form" id="checkoutForm">
+          <!-- Left Column: Shipping & Client Details -->
+          <div class="checkout-fields-col">
+            <h4 class="form-section-title"><i class="fa-solid fa-user"></i> Shipping & Client Details</h4>
+            
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="checkoutName">Full Name *</label>
+                <input type="text" id="checkoutName" class="form-control" placeholder="e.g. Victoria Sterling" required>
+              </div>
+              <div class="form-group">
+                <label for="checkoutEmail">Email Address *</label>
+                <input type="email" id="checkoutEmail" class="form-control" placeholder="e.g. victoria@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="checkoutPhone">Phone Number *</label>
+                <input type="tel" id="checkoutPhone" class="form-control" placeholder="e.g. +1 555-019-2834" required>
+              </div>
+              <div class="form-group">
+                <label for="checkoutCity">City / Destination *</label>
+                <input type="text" id="checkoutCity" class="form-control" placeholder="e.g. New York, NY" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkoutAddress">Delivery Address *</label>
+              <input type="text" id="checkoutAddress" class="form-control" placeholder="Street, Penthouse/Apartment suite" required>
+            </div>
+
+            <h4 class="form-section-title" style="margin-top:24px;"><i class="fa-solid fa-credit-card"></i> Payment Method</h4>
+            <div class="payment-options-grid">
+              <label class="payment-method-card">
+                <input type="radio" name="paymentOption" value="credit-card" checked>
+                <div class="payment-label-box">
+                  <i class="fa-solid fa-credit-card"></i>
+                  <span>Credit / Debit Card</span>
+                </div>
+              </label>
+              <label class="payment-method-card">
+                <input type="radio" name="paymentOption" value="apple-pay">
+                <div class="payment-label-box">
+                  <i class="fa-brands fa-apple-pay"></i>
+                  <span>Apple Pay</span>
+                </div>
+              </label>
+              <label class="payment-method-card">
+                <input type="radio" name="paymentOption" value="cod">
+                <div class="payment-label-box">
+                  <i class="fa-solid fa-hand-holding-dollar"></i>
+                  <span>Cash on Delivery</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Right Column: Order Summary Preview -->
+          <div class="checkout-summary-col">
+            <h4 class="form-section-title"><i class="fa-solid fa-receipt"></i> Bag Summary</h4>
+            <div class="checkout-items-preview" id="checkoutSummaryItems">
+              <!-- Item rows -->
+            </div>
+
+            <div class="checkout-price-card">
+              <div class="price-row">
+                <span>Subtotal:</span>
+                <strong id="checkoutSubtotal">$0.00</strong>
+              </div>
+              <div class="price-row">
+                <span>Promo Discount:</span>
+                <span id="checkoutDiscount" style="color:var(--secondary);">-$0.00</span>
+              </div>
+              <div class="price-row">
+                <span>Shipping:</span>
+                <span id="checkoutShipping">FREE</span>
+              </div>
+              <div class="price-row total-row">
+                <span>Grand Total:</span>
+                <strong id="checkoutTotal" style="color:var(--accent); font-size:1.3rem;">$0.00</strong>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="width:100%; margin-top:20px; padding:16px;">
+              <i class="fa-solid fa-lock"></i> Authorize & Place Order
+            </button>
+            <p class="checkout-security-note">
+              <i class="fa-solid fa-shield-check"></i> Encrypted with 256-bit bank-grade SSL security.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- 3. Order Confirmation Popup Modal -->
+    <div class="modal-dialog order-success-modal" id="orderSuccessModal" role="dialog" aria-modal="true" aria-labelledby="orderSuccessTitle" data-lenis-prevent>
+      <div class="modal-body text-center" style="padding:48px 32px;">
+        <div class="order-success-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <span class="order-success-pill">ORDER CONFIRMED</span>
+        <h2 id="orderSuccessTitle" style="font-family:var(--font-serif); font-size:2rem; margin:12px 0;">Thank You for Your Order!</h2>
+        <p style="color:var(--text-muted); max-width:480px; margin:0 auto 24px;">
+          Your bespoke fashion pieces have been reserved and routed to our master atelier for packaging.
+        </p>
+
+        <div class="order-details-card">
+          <div class="order-meta-grid">
+            <div>
+              <span class="meta-label">Order Number</span>
+              <strong id="orderIdText" class="meta-val highlight-val">STK-2026-948210</strong>
+            </div>
+            <div>
+              <span class="meta-label">Order Date</span>
+              <strong id="orderDateText" class="meta-val">Today</strong>
+            </div>
+            <div>
+              <span class="meta-label">Recipient</span>
+              <strong id="orderCustomerName" class="meta-val">Valued Client</strong>
+            </div>
+            <div>
+              <span class="meta-label">Est. Delivery</span>
+              <strong id="orderDeliveryText" class="meta-val">3-4 Days</strong>
+            </div>
+          </div>
+
+          <div class="order-confirmed-items" id="orderItemsSummaryList">
+            <!-- Dynamic ordered items -->
+          </div>
+
+          <div class="order-total-banner">
+            <span>Total Paid (Authorized):</span>
+            <strong id="orderTotalPaid">$0.00</strong>
+          </div>
+        </div>
+
+        <div class="order-success-actions">
+          <button type="button" class="btn btn-primary" id="continueShoppingBtn">
+            <i class="fa-solid fa-bag-shopping"></i> Continue Shopping
+          </button>
+          <a href="404.html" class="btn btn-outline" style="margin-left:12px;">
+            <i class="fa-solid fa-print"></i> Download Receipt
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =========================================================================
+       Slide-out Drawers (Shopping Cart & Wishlist)
+       ========================================================================= -->
+
+  <!-- Shopping Cart Drawer -->
+  <div class="drawer-backdrop" id="cartDrawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag" data-lenis-prevent>
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Shopping Bag</h3>
+        <span class="drawer-count" id="cartDrawerHeaderCount">(0 items)</span>
+      </div>
+      <button class="modal-close-btn" id="closeCartDrawerBtn" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div class="drawer-content" id="cartDrawerItems">
+      <!-- Dynamic cart items rows -->
+    </div>
+
+    <!-- Cart Footer & Checkout Summary -->
+    <div class="drawer-footer cart-drawer-footer">
+      <!-- Promo Coupon Input -->
+      <div class="cart-coupon-box">
+        <input type="text" id="cartCouponInput" placeholder="Promo code (e.g. STACKLY25, WELCOME15)" style="text-transform:uppercase;">
+        <button type="button" class="btn btn-secondary btn-sm" id="cartApplyCouponBtn">Apply</button>
+      </div>
+      <div id="cartCouponFeedback" class="coupon-feedback-msg"></div>
+
+      <!-- Price Breakdown -->
+      <div class="cart-totals-summary">
+        <div class="price-row">
+          <span>Subtotal:</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="price-row" id="cartDiscountRow" style="display:none; color:var(--secondary);">
+          <span>Promo Discount:</span>
+          <span id="cartDiscountAmount">-$0.00</span>
+        </div>
+        <div class="price-row">
+          <span>Shipping:</span>
+          <span id="cartShipping">FREE</span>
+        </div>
+        <div class="price-row total-row">
+          <span>Total:</span>
+          <strong id="cartGrandTotal">$0.00</strong>
+        </div>
+      </div>
+
+      <!-- Checkout Actions -->
+      <div class="cart-actions-row">
+        <button type="button" class="btn btn-primary btn-block" id="cartCheckoutBtn">
+          <i class="fa-solid fa-lock"></i> Proceed to Checkout
+        </button>
+      </div>
+
+      <div class="cart-extra-links">
+        <button type="button" class="btn-text-danger" id="clearCartBtn">
+          <i class="fa-solid fa-trash-can"></i> Clear Bag
+        </button>
+        <span class="shipping-guarantee-note">
+          <i class="fa-solid fa-shield-check"></i> Free Returns & Exchanges
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Wishlist Drawer -->
+  <div class="drawer-backdrop" id="wishlistDrawerBackdrop"></div>
+  <aside class="wishlist-drawer" id="wishlistDrawer" aria-label="Saved Wishlist" data-lenis-prevent>
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <i class="fa-solid fa-heart" style="color:var(--coral);"></i>
+        <h3>My Wishlist</h3>
+        <span class="drawer-count" id="wishlistDrawerHeaderCount">(0 items)</span>
+      </div>
+      <button class="modal-close-btn" id="closeWishlistDrawerBtn" aria-label="Close wishlist">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Scrollable Wishlist Items -->
+    <div class="drawer-content" id="wishlistDrawerItems">
+      <!-- Dynamic wishlist rows -->
+    </div>
+
+    <div class="drawer-footer">
+      <button type="button" class="btn btn-secondary btn-sm" id="clearWishlistBtn" style="color:var(--coral);">
+        <i class="fa-solid fa-trash-can"></i> Clear Wishlist
+      </button>
+      <a href="404.html" class="btn btn-primary btn-sm" onclick="document.getElementById('wishlistDrawer').classList.remove('active'); document.getElementById('wishlistDrawerBackdrop').classList.remove('active');">
+        Explore More Styles
+      </a>
+    </div>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- =========================================================================
+       JavaScript Libraries & Scripts
+       ========================================================================= -->
+  <!-- AOS (Animate on Scroll) JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Lenis Smooth Scrolling Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Core Application Scripts (Pure Vanilla JS) -->
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    // Quick helper to jump and filter direct category from footer/hero pills
+    window.setCategoryDirect = function(catSlug) {
+      const tab = document.querySelector(`.filter-tab[data-category="${catSlug}"]`);
+      if (tab) {
+        tab.click();
+      }
+    };
+  </script>
+</body>
+</html>

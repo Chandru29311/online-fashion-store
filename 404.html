@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Runway Look Not Found | Stackly</title>
+  <meta name="description" content="Looks like this couture design or boutique page has left the runway. Return to the Stackly Fashion Collection.">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Full Page Layout & Alignment */
+    body.error-page-body {
+      background: radial-gradient(circle at 50% 25%, #161e2e 0%, #090d16 70%, #020408 100%);
+      color: #fafaf9;
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 2.5rem 1.25rem;
+      box-sizing: border-box;
+      font-family: var(--font-sans);
+    }
+
+    /* Ambient glow behind card */
+    .error-ambient-glow {
+      position: absolute;
+      width: min(650px, 90vw);
+      height: min(650px, 90vw);
+      background: radial-gradient(circle, rgba(225, 29, 72, 0.22) 0%, rgba(9, 13, 22, 0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Floating Decorative Icons (Desktop only for clean mobile display) */
+    .error-floating-icon {
+      position: absolute;
+      color: rgba(225, 29, 72, 0.16);
+      pointer-events: none;
+      z-index: 1;
+      animation: floatBadge 6s ease-in-out infinite alternate;
+    }
+
+    @media (max-width: 768px) {
+      .error-floating-icon {
+        display: none !important;
+      }
+    }
+
+    /* Centered Glassmorphic Card */
+    .error-content-card {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+      background: rgba(22, 30, 46, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-xl);
+      padding: 3rem 2.25rem;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.65);
+      box-sizing: border-box;
+      margin: auto 0;
+    }
+
+    .error-brand-wrap {
+      margin-bottom: 1.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .error-brand-wrap a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .error-brand-logo {
+      height: 44px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 4px 12px rgba(225, 29, 72, 0.4));
+      transition: transform 0.3s ease;
+    }
+
+    .error-brand-logo:hover {
+      transform: scale(1.05);
+    }
+
+    .error-code-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(225, 29, 72, 0.18);
+      border: 1px solid rgba(225, 29, 72, 0.35);
+      color: #fda4af;
+      padding: 0.35rem 1rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .error-huge-number {
+      font-family: var(--font-serif);
+      font-size: clamp(4.5rem, 14vw, 7.5rem);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ffffff 40%, #fda4af 75%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0.25rem 0 0.5rem;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .error-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 3.5vw, 1.95rem);
+      margin: 1rem 0 0.75rem;
+      color: #ffffff;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .error-desc {
+      color: #94a3b8;
+      font-size: clamp(0.9rem, 2.2vw, 1.02rem);
+      line-height: 1.6;
+      margin: 0 auto 1.75rem;
+      max-width: 480px;
+    }
+
+    /* Actions Row */
+    .error-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .error-cta-group .btn {
+      white-space: nowrap;
+    }
+
+    /* Quick Links Bar */
+    .quick-links-pill-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.65rem;
+      padding-top: 1.35rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+
+    .quick-links-title {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: #cbd5e1;
+    }
+
+    .quick-links-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quick-links-pill-bar a {
+      color: #fda4af;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-pill);
+      background: rgba(225, 29, 72, 0.1);
+      border: 1px solid rgba(225, 29, 72, 0.22);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .quick-links-pill-bar a:hover {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 540px) {
+      body.error-page-body {
+        padding: 1.5rem 1rem;
+      }
+
+      .error-content-card {
+        padding: 2.25rem 1.25rem;
+        border-radius: var(--radius-lg);
+      }
+
+      .error-brand-logo {
+        height: 38px;
+      }
+
+      .error-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+
+      .error-cta-group .btn {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .quick-links-items {
+        gap: 0.4rem;
+      }
+
+      .quick-links-pill-bar a {
+        font-size: 0.78rem;
+        padding: 0.25rem 0.65rem;
+      }
+    }
+
+    @media (max-height: 650px) {
+      body.error-page-body {
+        justify-content: flex-start;
+      }
+
+      .error-content-card {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="error-page-body">
+
+  <!-- Ambient glow backdrop -->
+  <div class="error-ambient-glow"></div>
+
+  <!-- Floating Fashion Icons (Large Screens) -->
+  <i class="fa-solid fa-shirt error-floating-icon" style="top: 12%; left: 8%; font-size: 2.5rem; animation-delay: 0s;"></i>
+  <i class="fa-solid fa-gem error-floating-icon" style="top: 20%; right: 10%; font-size: 2.2rem; animation-delay: 1.2s;"></i>
+  <i class="fa-solid fa-bag-shopping error-floating-icon" style="bottom: 15%; left: 12%; font-size: 3rem; animation-delay: 2.4s;"></i>
+  <i class="fa-solid fa-person-dress error-floating-icon" style="bottom: 22%; right: 14%; font-size: 2.8rem; animation-delay: 1.8s;"></i>
+
+  <!-- Main Error Card -->
+  <main class="error-content-card" data-aos="zoom-in" data-aos-duration="600">
+    <!-- Brand Logo -->
+    <div class="error-brand-wrap">
+      <a href="index.html" aria-label="Return to Stackly Boutique Home">
+        <img src="assets/images/stackly_061.webp" alt="Stackly Logo" class="error-brand-logo">
+      </a>
+    </div>
+
+    <!-- Badge -->
+    <div class="error-code-badge">
+      <i class="fa-solid fa-scissors"></i>
+      <span>Runway Edit #404</span>
+    </div>
+
+    <!-- Big 404 Number -->
+    <h1 class="error-huge-number">404</h1>
+
+    <!-- Headline -->
+    <h2 class="error-title">This Couture Look is Off the Runway</h2>
+
+    <!-- Description -->
+    <p class="error-desc">
+      The fashion piece, collection, or styling link you are trying to view might have been retired, renamed, or is currently reserved in our private archive.
+    </p>
+
+    <!-- CTAs -->
+    <div class="error-cta-group">
+      <a href="index.html" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-house"></i>
+        <span>Return to Boutique Home</span>
+      </a>
+      <a href="index.html#catalogSection" class="btn btn-outline-light btn-lg">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Explore Collection</span>
+      </a>
+    </div>
+
+    <!-- Quick Navigation Links -->
+    <div class="quick-links-pill-bar">
+      <span class="quick-links-title">Popular Runway Departments:</span>
+      <div class="quick-links-items">
+        <a href="index.html#categoriesSection"><i class="fa-solid fa-person-dress"></i> Women's Dresses</a>
+        <a href="index.html#catalogSection"><i class="fa-solid fa-shirt"></i> Tailored Shirts</a>
+        <a href="index.html#catalogSection"><i class="fa-solid fa-bag-shopping"></i> Designer Bags</a>
+        <a href="index.html#newArrivalsSection"><i class="fa-solid fa-sparkles"></i> New Arrivals</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    if (typeof AOS !== 'undefined') {
+      AOS.init({ once: true });
+    }
+  </script>
+</body>
+</html>
